@@ -1,0 +1,19 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "name-tags"
+version = "0.1.0"
+description = "Generate a PDF of name-tag images arranged in a grid"
+requires-python = ">=3.12"
+dependencies = [
+    "pillow>=12.3.0",
+    "reportlab>=5.0.0",
+]
+
+[project.scripts]
+name-tags-pdf = "name_tags.generate_pdf:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/name_tags"]
