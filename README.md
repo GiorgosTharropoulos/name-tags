@@ -39,6 +39,35 @@ Disable the cutting guide lines:
 uv run name-tags-pdf --input-dir "$HOME/Downloads/name-tags" --output-pdf /tmp/name_tags_no_gap_crop.pdf --no-cutting-lines
 ```
 
+## CLI help
+
+```text
+usage: name-tags-pdf [-h] [--input-dir INPUT_DIR] [--output-pdf OUTPUT_PDF]
+                     [--tag-width-cm TAG_WIDTH_CM]
+                     [--tag-height-cm TAG_HEIGHT_CM] [--margin-cm MARGIN_CM]
+                     [--gap-cm GAP_CM] [--portrait] [--no-cutting-lines]
+                     [--crop-marks]
+
+Generate a PDF of name-tag images arranged in a grid
+
+options:
+  -h, --help            show this help message and exit
+  --input-dir INPUT_DIR
+                        Directory containing image files
+  --output-pdf OUTPUT_PDF
+                        Output PDF path
+  --tag-width-cm TAG_WIDTH_CM
+                        Tag width in centimeters
+  --tag-height-cm TAG_HEIGHT_CM
+                        Tag height in centimeters
+  --margin-cm MARGIN_CM
+                        Page margin in centimeters
+  --gap-cm GAP_CM       Gap between tags in centimeters
+  --portrait            Use portrait orientation instead of landscape
+  --no-cutting-lines    Disable the cutting guide lines around each tag
+  --crop-marks          Add crop marks around each tag
+```
+
 ## Notes
 
 For accurate dimensions:
